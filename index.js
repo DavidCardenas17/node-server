@@ -77,7 +77,7 @@ async function preguntarOpcion() {
         break;
     case 4:
         tareasActuales();
-        //console.log(listaDeTareas);
+        
         break;
     case 5:
         console.log("¡Hasta luego!");
