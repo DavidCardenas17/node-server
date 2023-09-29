@@ -8,7 +8,7 @@ let listaDeTareas=[ ];
     function agregarTarea(id, descripción, estado) {
     listaDeTareas.push({ id, descripción, estado });
 };
-    function actualizarTarea(id,  nuevoValor) {
+    function actualizarTarea(id, nuevoValor) {
         const indice = listaDeTareas.findIndex(tarea => tarea.id === id);
         if (indice !== -1) {
         listaDeTareas[indice].estado = nuevoValor;
@@ -30,6 +30,7 @@ let listaDeTareas=[ ];
             console.log("Identificador de tarea:", tarea.id);
             console.log("Descripción:", tarea.descripción);
             console.log("Estado:", tarea.estado);
+        return listaDeTareas;
     }
 };
 async function preguntarOpcion() {
@@ -98,3 +99,7 @@ await preguntarOpcion();
 }
 
 preguntarOpcion();
+
+module.exports = {
+    tareasActuales,
+};
